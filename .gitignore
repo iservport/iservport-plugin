@@ -52,3 +52,4 @@ gradle-app.setting
 /app-iam/src/main/resources/application-dev.yaml
 /iservport-control.log
 /log
+/.idea/
