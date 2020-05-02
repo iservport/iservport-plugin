@@ -14,4 +14,6 @@ enablePlugins(SbtPlugin)
 
 scalacOptions += "-Ypartial-unification"
 
+githubOwner := "iservport"
 
+githubRepository := "sbt-github-packages"
