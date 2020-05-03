@@ -1,3 +1,4 @@
+scalaVersion := "2.13.2"
 
 sbtPlugin := true
 
