@@ -54,7 +54,8 @@ object SbtIservportPlugin extends AutoPlugin {
 
     object ConfigDeps {
       lazy val all = Seq(
-        "com.github.pureconfig"             %% "pureconfig"                    % "0.9.1"
+        "com.github.pureconfig"             %% "pureconfig"                    % "0.12.3",
+        "io.kontainers"                     %% "purecsv"                       % "0.3.3"
       )
     }
 
