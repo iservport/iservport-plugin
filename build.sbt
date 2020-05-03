@@ -19,4 +19,4 @@ githubOwner := "iservport"
 
 githubRepository := "sbt-iservport"
 
-githubTokenSource := TokenSource.GitConfig("github.token")
+githubTokenSource := TokenSource.GitConfig("github.token") || TokenSource.Environment("GITHUB_TOKEN")
