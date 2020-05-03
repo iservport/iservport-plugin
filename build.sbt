@@ -1,3 +1,4 @@
+
 sbtPlugin := true
 
 name := "sbt-iservport"
@@ -14,8 +15,8 @@ enablePlugins(SbtPlugin)
 
 scalacOptions += "-Ypartial-unification"
 
-githubTokenSource := TokenSource.Environment("GITHUB_TOKEN")
-
 githubOwner := "iservport"
 
-githubRepository := "sbt-github-packages"
+githubRepository := "sbt-iservport"
+
+githubTokenSource := TokenSource.GitConfig("github.token")
