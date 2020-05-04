@@ -114,7 +114,6 @@ object SbtIservportPlugin extends AutoPlugin {
         "net.java.dev.jets3t"                % "jets3t"                         % "0.8.1",
         "org.apache.pdfbox"                  % "pdfbox"                         % "2.0.16",
         "org.apache.tika"                    % "tika-core"                      % "1.19.1",
-        "com.github.kenglxn.qrgen"           % "javase"                         % "2.5.0",
         "net.coobird"                        % "thumbnailator"                  % "0.4.8"
       )
     }
