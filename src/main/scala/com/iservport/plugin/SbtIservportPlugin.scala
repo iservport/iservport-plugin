@@ -15,19 +15,20 @@ object SbtIservportPlugin extends AutoPlugin {
   object autoImport {
 
     val appSources = Def.settingKey[List[Symbol]]("Name of the app source folders as Symbols list")
+
+    unmanagedSourceDirectories in Compile ++=
+      appSources.value.map(s => (baseDirectory.value / s"app-${s.name}/src/main/scala"))
+
+    unmanagedSourceDirectories in Test ++=
+      appSources.value.map(s => (baseDirectory.value / s"app-${s.name}/src/test/scala"))
+
+    unmanagedResourceDirectories in Compile ++=
+      appSources.value.map(s => (baseDirectory.value / s"app-${s.name}/src/main/resources"))
+
   }
 
   import Libraries._
   import autoImport._
-
-  unmanagedSourceDirectories in Compile ++=
-    appSources.value.map(s => (baseDirectory.value / s"app-${s.name}/src/main/scala"))
-
-  unmanagedSourceDirectories in Test ++=
-    appSources.value.map(s => (baseDirectory.value / s"app-${s.name}/src/test/scala"))
-
-  unmanagedResourceDirectories in Compile ++=
-    appSources.value.map(s => (baseDirectory.value / s"app-${s.name}/src/main/resources"))
 
   override def projectSettings = Seq(
     shellPrompt := { state =>
@@ -113,7 +114,7 @@ object SbtIservportPlugin extends AutoPlugin {
         "net.java.dev.jets3t"                % "jets3t"                         % "0.8.1",
         "org.apache.pdfbox"                  % "pdfbox"                         % "2.0.16",
         "org.apache.tika"                    % "tika-core"                      % "1.19.1",
-        "com.github.kenglxn.QRGen"           % "javase"                         % "2.1.0",
+        "com.github.kenglxn.qrgen"           % "javase"                         % "2.5.0",
         "net.coobird"                        % "thumbnailator"                  % "0.4.8"
       )
     }
