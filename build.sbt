@@ -14,12 +14,6 @@ enablePlugins(SbtPlugin)
 
 publishMavenStyle := false
 
-githubOwner := "iservport"
-
-githubRepository := "sbt-iservport"
-
-githubTokenSource := TokenSource.GitConfig("github.token") || TokenSource.Environment("GITHUB_TOKEN")
-
 resolvers += Resolver.typesafeIvyRepo("releases")
 
 resolvers += Resolver.mavenLocal
