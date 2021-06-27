@@ -12,7 +12,7 @@ addSbtPlugin("com.typesafe.sbt" % "sbt-web"             % "1.4.4")
 
 enablePlugins(SbtPlugin)
 
-resolvers += Resolver.typesafeIvyRepo("releases")
+resolvers += Resolver.sonatypeRepo("releases")
 
 resolvers += Resolver.mavenLocal
 

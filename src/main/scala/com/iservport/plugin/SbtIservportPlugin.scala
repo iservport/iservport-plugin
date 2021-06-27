@@ -51,7 +51,7 @@ object SbtIservportPlugin extends AutoPlugin {
   object Libraries {
 
     private lazy val springVersion     = "4.3.20.RELEASE"
-    private lazy val springBootVersion = "2.1.0.RELEASE"
+    private lazy val springBootVersion = "2.5.2"
 
     object ConfigDeps {
       lazy val all = Seq(
@@ -108,13 +108,40 @@ object SbtIservportPlugin extends AutoPlugin {
       )
     }
 
+    object AkkaDeps {
+      private lazy val akkaVersion = "2.6.15"
+      lazy val all = Seq(
+        "com.sendgrid"          % "sendgrid-java"            % "4.3.0",
+        "com.typesafe.akka"    %% "akka-actor-typed"         % akkaVersion,
+        "com.typesafe.akka"    %% "akka-actor-testkit-typed" % akkaVersion % Test,
+        "com.typesafe.akka"    %% "akka-actor"               % akkaVersion,
+        "com.typesafe.akka"    %% "akka-slf4j"               % akkaVersion
+      )
+    }
+
+    object ZioDeps {
+      private lazy val zioVersion       = "1.0.9"
+      private lazy val zioS3Version     = "0.3.0"
+      private lazy val zioConfigVersion = "1.0.2"
+      lazy val all = Seq(
+        "dev.zio" %% "zio-config"          % zioConfigVersion,
+        "dev.zio" %% "zio-config-magnolia" % zioConfigVersion,
+        "dev.zio" %% "zio-config-typesafe" % zioConfigVersion,
+        "dev.zio" %% "zio-s3"              % zioS3Version,
+        "dev.zio" %% "zio-test"            % zioVersion % "test",
+        "dev.zio" %% "zio-test-sbt"        % zioVersion % "test"
+      )
+    }
+
     object OtherDeps {
       lazy val all = Seq(
         "commons-io"                         % "commons-io"                     % "2.6",
         "net.java.dev.jets3t"                % "jets3t"                         % "0.8.1",
         "org.apache.pdfbox"                  % "pdfbox"                         % "2.0.16",
         "org.apache.tika"                    % "tika-core"                      % "1.19.1",
-        "net.coobird"                        % "thumbnailator"                  % "0.4.8"
+        "net.coobird"                        % "thumbnailator"                  % "0.4.8",
+        "org.asciidoctor"                    % "asciidoctorj"                   % "2.0.0",
+        "org.jsoup"                          % "jsoup"                          % "1.12.1"
       )
     }
 
@@ -129,7 +156,10 @@ object SbtIservportPlugin extends AutoPlugin {
         "org.scalatest"                     %% "scalatest"                      % scalatestVersion   % Test,
         "org.mockito"                        % "mockito-core"                   % mockitoVersion     % Test,
         "junit"                              % "junit"                          % junitVersion,
-        "com.novocode"                       % "junit-interface"                 % "0.11"            % Test
+        "com.novocode"                       % "junit-interface"                % "0.11"             % Test,
+        "javax.xml.bind"                     % "jaxb-api"                       % "2.3.1"            % Test,
+        "org.glassfish.jaxb"                 % "jaxb-runtime"                   % "2.3.2"            % Test
+
       )
     }
 
