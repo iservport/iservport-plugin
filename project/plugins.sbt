@@ -1,4 +1,4 @@
 logLevel := Level.Warn
 
-addSbtPlugin("com.codecommit" % "sbt-github-actions" % "0.6.2")
+addSbtPlugin("com.codecommit" % "sbt-github-actions" % "0.12.0")
 
