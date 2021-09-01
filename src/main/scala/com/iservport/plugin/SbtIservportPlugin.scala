@@ -84,7 +84,7 @@ object SbtIservportPlugin extends AutoPlugin {
       private lazy val hikariVersion         = "3.4.3"
       lazy val all = Seq(
         "mysql"                              % "mysql-connector-java"           % mySqlConnectorVersion,
-        "com.fasterxml.jackson.module"      %% "jackson-module-scala"           % "2.11.0",
+        "com.fasterxml.jackson.module"      %% "jackson-module-scala"           % "2.12.4",
         "com.zaxxer"                         % "HikariCP"                       % hikariVersion,
         "org.springframework.boot"           % "spring-boot-starter-data-jpa"   % springBootVersion
       )
