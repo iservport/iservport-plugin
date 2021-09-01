@@ -6,7 +6,7 @@ scalaVersion := "2.12.7"
 
 sbtPlugin := true
 
-addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "1.7.0")
+addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "1.8.0")
 
 addSbtPlugin("com.typesafe.sbt" % "sbt-web"             % "1.4.4")
 
