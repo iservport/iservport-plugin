@@ -6,6 +6,8 @@ name := "sbt-iservport"
 
 scalaVersion := "2.12.7"
 
+crossPaths := false
+
 sbtPlugin := true
 
 addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "1.8.0")
