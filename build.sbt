@@ -20,7 +20,7 @@ resolvers += "jitpack" at "https://jitpack.io"
 
 // credentials += Credentials(Path.userHome / ".sbt" / ".githubcredentials")
 
-publishTo := Some("GitHub iservport Apache Maven Packages" at "https://maven.pkg.github.com/iservport/iservport-concurrency")
+publishTo := Some("GitHub iservport Apache Maven Packages" at "https://maven.pkg.github.com/iservport/iservport-plugin")
 publishMavenStyle := true
 credentials += Credentials(
   "GitHub Package Registry",
