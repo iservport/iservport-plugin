@@ -18,9 +18,13 @@ resolvers += Resolver.mavenLocal
 
 resolvers += "jitpack" at "https://jitpack.io"
 
+// credentials += Credentials(Path.userHome / ".sbt" / ".githubcredentials")
+
+publishTo := Some("GitHub iservport Apache Maven Packages" at "https://maven.pkg.github.com/iservport/iservport-concurrency")
 publishMavenStyle := true
-
-credentials += Credentials(Path.userHome / ".sbt" / ".githubcredentials")
-
-publishTo := Some("GitHub Package Registry" at "https://maven.pkg.github.com/iservport/sbt-iservport")
-
+credentials += Credentials(
+  "GitHub Package Registry",
+  "maven.pkg.github.com",
+  "iservport",
+  System.getenv("PUBLISH_TOKEN")
+)
