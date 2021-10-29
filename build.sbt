@@ -1,7 +1,5 @@
 organization := "com.iservport"
 
-organizationName := "com.iservport"
-
 name := "sbt-iservport"
 
 scalaVersion := "2.12.7"
