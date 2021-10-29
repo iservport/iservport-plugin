@@ -1,6 +1,6 @@
 organization := "com.iservport"
 
-name := "sbt-iservport"
+name := "iservport-plugin"
 
 scalaVersion := "2.12.7"
 
